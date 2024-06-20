@@ -7,7 +7,7 @@ app = Flask(__name__)
 # MySQL configurations
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'bloubloublou'
-app.config['MYSQL_PASSWORD'] = 'blablabla'  # replace with your actual password
+app.config['MYSQL_PASSWORD'] = 'blablabla'  
 app.config['MYSQL_DB'] = 'hackerpoulette'
 
 mysql = MySQL(app)
@@ -34,7 +34,7 @@ def login():
 
         # Insert form data into the database
         cur = mysql.connection.cursor()
-        cur.execute("INSERT INTO users(first_name, last_name, email, country, gender, service) VALUES (%s, %s, %s, %s, %s, %s)",
+        cur.execute("INSERT INTO users(first_name, last_name, email, country, gender, service) VALUES (%s, %s, %s, %s, %s, %s)", # %s to avoid sql injection
                     (username, last_name, email, country, gender, services_str))
         mysql.connection.commit()
         cur.close()
