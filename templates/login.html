@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Login</title>
+  </head>
+  <style> form{ display:flex; flex-direction:row; justify-content:space-around; } div {border-style: dotted; padding: 30px;} </style>
+  <body>
+    <h1>Formulaire</h1>
+    <form action="/login" method="post">
+      <div>
+        <label for="firstName" name="firstName">firstName:</label>
+        <input type="text" id="firstName" name="username">
+      </div>
+      <div>
+        <label for="lastName">lastName:</label>
+        <input type="lastName" id="lastName" name="lastName">
+      </div>
+      <div>
+        <label for="email">email</label>
+        <input type="email" id="email" name="email">
+      </div>
+      <div>
+        <label for="country">country</label>
+        <input type="country" id="country" name="country">
+      </div>
+      <div>
+        <label for="male">
+          <input type="radio" id="male" name="gender" value="male">Male
+        </label>
+        <br>
+        <label for="female">
+          <input type="radio" id="female" name="gender" value="female">Female
+        </label>
+      </div>
+      <div>
+        <label for="repair">
+          <input type="checkbox" id="repair" name="service" value="repair">Repair
+        </label>
+        <br>
+        <label for="order">
+          <input type="checkbox" id="order" name="service" value="order">Order
+        </label>
+        <br>
+        <label for="others">
+          <input type="checkbox" id="others" name="service" value="others">Others
+        </label>
+      </div>
+      <div>
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </body>
+</html>
